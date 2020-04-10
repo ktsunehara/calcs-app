@@ -1,4 +1,16 @@
 
+<div class=center>
+  <div class="minato">
 
-<p>正解<%= @total %></p>
-<p>回答<%= @answer %></p>
+
+<% if @total == @answer %>
+  <%= "こたえは#{@total}" %>
+  <h1 class="tensai">　てんさい！ 天才！</h1>
+  <% else %>
+  <h1 class="t"><%= "こたえは#{@total}でした。"%></h1>
+<% end %>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<%= link_to "つぎのもんだい", "/" ,class:"next"%>
+
+</div>
+</div>

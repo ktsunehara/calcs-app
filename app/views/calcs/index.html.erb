@@ -1,12 +1,12 @@
-<h1>しょうがく１ねんせいの<br>みなとくんのたしざんアプリ</h1>
+<div class=center>
+<h3>しょうがく１ねんせいの<br>みなとくんのたしざんアプリ</h3>
 
-<p><%= @right %> + <%= @left %> = 
-
+<h2><%= @right %> + <%= @left %> =
 <%= form_tag ("/calc_plus") do %>
 <%= text_field :calc, :num1 %>
-<%= submit_tag "こたえ" %>
+<%= hidden_field_tag :right,@right %>
+<%= hidden_field_tag :left,@left %>
+<%= submit_tag "こたえ" ,class:"botton" %>
 <% end %>
-</p>
-
-<%= @total %>
-<%= @answer %>
+</h2>
+</div>
